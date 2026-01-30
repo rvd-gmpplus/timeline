@@ -1,0 +1,5 @@
+.claude/
+pptx_extracted/
+*.pptx
+_ul
+context/
