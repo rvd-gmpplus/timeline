@@ -86,6 +86,21 @@
             box-shadow: 0 4px 15px rgba(56, 183, 105, 0.4);
         }
 
+        /* Glowing effect for Timeline button */
+        .btn-timeline.glowing {
+            animation: glow 1.5s ease-in-out infinite alternate;
+            box-shadow: 0 0 20px rgba(56, 183, 105, 0.6), 0 0 40px rgba(56, 183, 105, 0.4), 0 0 60px rgba(56, 183, 105, 0.2);
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 20px rgba(56, 183, 105, 0.6), 0 0 40px rgba(56, 183, 105, 0.4), 0 0 60px rgba(56, 183, 105, 0.2);
+            }
+            to {
+                box-shadow: 0 0 30px rgba(56, 183, 105, 0.8), 0 0 50px rgba(56, 183, 105, 0.6), 0 0 70px rgba(56, 183, 105, 0.4);
+            }
+        }
+
         .container {
             max-width: 1400px;
             margin: 0 auto;
@@ -620,6 +635,31 @@
             cursor: pointer;
         }
 
+        /* Navigation Arrows */
+        .slide-arrows {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding: 0 10px;
+        }
+
+        .arrow-btn {
+            background: var(--gmp-light-purple);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            color: var(--gmp-purple);
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .arrow-btn:hover {
+            background: var(--gmp-purple);
+            color: white;
+        }
+
         @media (max-width: 768px) {
             .modal-content {
                 margin: 10px;
@@ -656,7 +696,7 @@
                 </svg>
                 Presentation
             </a>
-            <span class="nav-btn btn-timeline" style="cursor: default;">
+            <span class="nav-btn btn-timeline glowing" style="cursor: default;">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="12" y1="20" x2="12" y2="10"></line>
                     <line x1="18" y1="20" x2="18" y2="4"></line>
@@ -775,6 +815,12 @@
                 <span>Upcoming</span>
             </div>
         </div>
+
+        <!-- Navigation Arrows -->
+        <div class="slide-arrows">
+            <button class="arrow-btn" onclick="window.location.href='index.html#slide-4'">&larr; Previous</button>
+            <button class="arrow-btn" onclick="window.location.href='index.html#slide-5'">Next &rarr;</button>
+        </div>
     </main>
 
     <!-- Modal Overlay -->
@@ -809,7 +855,7 @@
                     <div class="modal-section">
                         <h3>Key Deliverables</h3>
                         <ul>
-                            <li><span class="checklist-icon">&#x2705;</span> Team formation with Rick as IT Lead and Martin as sponsor</li>
+                            <li><span class="checklist-icon">&#x2705;</span> Team formation (Mirella, Martin, Stan, Rick, Ellen, Arnold and Jeroen)</li>
                             <li><span class="checklist-icon">&#x2705;</span> TRIMM partnership established for data strategy</li>
                             <li><span class="checklist-icon">&#x2705;</span> Initial workshops conducted</li>
                             <li><span class="checklist-icon">&#x2705;</span> Governance structure defined</li>

@@ -86,21 +86,6 @@
             box-shadow: 0 4px 15px rgba(56, 183, 105, 0.4);
         }
 
-        /* Glowing effect for Timeline button */
-        .btn-timeline.glowing {
-            animation: glow 1.5s ease-in-out infinite alternate;
-            box-shadow: 0 0 20px rgba(56, 183, 105, 0.6), 0 0 40px rgba(56, 183, 105, 0.4), 0 0 60px rgba(56, 183, 105, 0.2);
-        }
-
-        @keyframes glow {
-            from {
-                box-shadow: 0 0 20px rgba(56, 183, 105, 0.6), 0 0 40px rgba(56, 183, 105, 0.4), 0 0 60px rgba(56, 183, 105, 0.2);
-            }
-            to {
-                box-shadow: 0 0 30px rgba(56, 183, 105, 0.8), 0 0 50px rgba(56, 183, 105, 0.6), 0 0 70px rgba(56, 183, 105, 0.4);
-            }
-        }
-
         .presentation-container {
             max-width: 1200px;
             margin: 40px auto;
@@ -146,9 +131,6 @@
             transform: scale(1.2);
         }
 
-        .slide-dot.timeline-dot.active {
-            background: var(--gmp-green);
-        }
 
         .slide-arrows {
             display: flex;
@@ -485,178 +467,7 @@
             font-size: 14px;
         }
 
-        /* Slide 6 - Timeline */
-        .timeline-slide .slide-content {
-            padding: 40px 30px;
-        }
-
-        .timeline-header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .timeline-header h2 {
-            color: var(--gmp-green);
-            font-size: 32px;
-        }
-
-        .timeline-header h3 {
-            color: var(--gmp-purple);
-            font-size: 20px;
-            font-weight: normal;
-            margin-top: 5px;
-        }
-
-        .timeline-header .updated {
-            color: var(--text-gray);
-            font-size: 13px;
-            margin-top: 8px;
-        }
-
-        .timeline-bar {
-            display: flex;
-            gap: 6px;
-            margin: 25px 0 15px;
-        }
-
-        .timeline-period {
-            flex: 1;
-            padding: 12px 15px;
-            border-radius: 25px;
-            text-align: center;
-            font-weight: 700;
-            font-size: 12px;
-            color: var(--gmp-purple);
-            background: var(--gmp-light-purple);
-        }
-
-        .timeline-period.active {
-            background: var(--gmp-dark-green);
-            color: white;
-        }
-
-        .timeline-period.future {
-            background: linear-gradient(90deg, var(--gmp-light-purple) 30%, #C8B6E2 100%);
-        }
-
-        .timeline-period.far-future {
-            background: linear-gradient(90deg, #C8B6E2 30%, #A594C7 100%);
-        }
-
-        .phases-container {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 12px;
-        }
-
-        .phase-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-            border: 1px solid #eee;
-        }
-
-        .phase-card.completed { background: var(--gmp-box-purple); }
-        .phase-card.active { background: var(--gmp-light-green); }
-        .phase-card.future { background: var(--gmp-box-purple); }
-
-        .phase-line {
-            height: 4px;
-        }
-
-        .phase-card.completed .phase-line { background: var(--gmp-light-gray); }
-        .phase-card.active .phase-line { background: var(--gmp-dark-green); }
-        .phase-card.future .phase-line { background: var(--gmp-purple); }
-        .phase-card.gradient-1 .phase-line { background: linear-gradient(90deg, var(--gmp-purple) 30%, #9B8AC4 100%); }
-        .phase-card.gradient-2 .phase-line { background: linear-gradient(90deg, #9B8AC4 30%, #B8A4D6 100%); }
-
-        .phase-content {
-            padding: 15px;
-        }
-
-        .phase-title {
-            color: var(--gmp-purple);
-            font-size: 14px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .phase-description {
-            color: var(--text-dark);
-            font-size: 11px;
-            line-height: 1.5;
-            margin-bottom: 10px;
-        }
-
-        .phase-status {
-            font-size: 10px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .status-completed { color: var(--gmp-dark-green); }
-        .status-progress { color: var(--gmp-dark-green); }
-        .status-upcoming { color: var(--gmp-purple); }
-
-        .current-marker {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            background: var(--gmp-dark-green);
-            color: white;
-            padding: 3px 8px;
-            border-radius: 10px;
-            font-size: 9px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .tasks-list {
-            list-style: none;
-            margin-top: 8px;
-        }
-
-        .tasks-list li {
-            font-size: 10px;
-            color: var(--text-dark);
-            padding: 2px 0;
-            display: flex;
-            align-items: flex-start;
-            gap: 5px;
-        }
-
-        .timeline-legend {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-top: 20px;
-            padding: 15px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-        }
-
-        .legend-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 12px;
-            color: var(--gmp-gray);
-        }
-
-        .legend-color {
-            width: 16px;
-            height: 16px;
-            border-radius: 3px;
-        }
-
-        .legend-completed { background: var(--gmp-light-gray); }
-        .legend-active { background: var(--gmp-dark-green); }
-        .legend-upcoming { background: var(--gmp-purple); }
-
-        /* Slide 7 - Call to Action */
+        /* Slide 6 - Call to Action */
         .cta-slide {
             text-align: center;
             display: flex;
@@ -690,12 +501,6 @@
             margin-bottom: 30px;
         }
 
-        @media (max-width: 1100px) {
-            .phases-container {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
         @media (max-width: 768px) {
             .two-column, .vision-guardrails, .pillars-grid {
                 grid-template-columns: 1fr;
@@ -707,14 +512,6 @@
 
             .golden-circle {
                 margin: 0 auto 30px;
-            }
-
-            .phases-container {
-                grid-template-columns: 1fr;
-            }
-
-            .timeline-bar {
-                flex-direction: column;
             }
 
             .slide-content {
@@ -729,300 +526,8 @@
                 flex-direction: column;
                 gap: 20px;
             }
-
-            .timeline-legend {
-                flex-wrap: wrap;
-            }
         }
 
-        /* Modal Styles */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(5px);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            padding: 20px;
-        }
-
-        .modal-overlay.active {
-            display: flex;
-        }
-
-        .modal-content {
-            background: white;
-            border-radius: 16px;
-            max-width: 700px;
-            width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
-            position: relative;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            animation: modalSlideIn 0.3s ease;
-        }
-
-        @keyframes modalSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            background: none;
-            border: none;
-            font-size: 28px;
-            cursor: pointer;
-            color: var(--gmp-gray);
-            transition: color 0.2s;
-            z-index: 10;
-        }
-
-        .modal-close:hover {
-            color: var(--gmp-purple);
-        }
-
-        .modal-header {
-            padding: 30px 30px 20px;
-            border-bottom: 1px solid var(--gmp-very-light-gray);
-        }
-
-        .modal-status {
-            display: inline-block;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 10px;
-        }
-
-        .modal-status.completed {
-            background: var(--gmp-light-gray);
-            color: white;
-        }
-
-        .modal-status.in-progress {
-            background: var(--gmp-dark-green);
-            color: white;
-        }
-
-        .modal-status.upcoming {
-            background: var(--gmp-purple);
-            color: white;
-        }
-
-        .modal-status.not-started {
-            background: var(--gmp-very-light-gray);
-            color: var(--gmp-gray);
-        }
-
-        .modal-header h2 {
-            color: var(--gmp-purple);
-            font-size: 28px;
-            margin-bottom: 5px;
-        }
-
-        .modal-period {
-            color: var(--text-gray);
-            font-size: 14px;
-        }
-
-        .modal-body {
-            padding: 25px 30px 30px;
-        }
-
-        .modal-section {
-            margin-bottom: 25px;
-        }
-
-        .modal-section:last-child {
-            margin-bottom: 0;
-        }
-
-        .modal-section h3 {
-            color: var(--gmp-purple);
-            font-size: 16px;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .modal-section h3 svg {
-            color: var(--gmp-green);
-        }
-
-        .modal-section ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .modal-section li {
-            padding: 8px 0;
-            color: var(--text-dark);
-            font-size: 14px;
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            border-bottom: 1px solid var(--gmp-very-light-gray);
-        }
-
-        .modal-section li:last-child {
-            border-bottom: none;
-        }
-
-        .modal-section p {
-            color: var(--text-dark);
-            font-size: 14px;
-            line-height: 1.7;
-        }
-
-        .modal-card {
-            background: var(--gmp-box-purple);
-            border-radius: 10px;
-            padding: 15px 20px;
-            margin-bottom: 10px;
-        }
-
-        .modal-card h4 {
-            color: var(--gmp-purple);
-            font-size: 14px;
-            margin-bottom: 8px;
-        }
-
-        .modal-card p {
-            font-size: 13px;
-            margin: 0;
-        }
-
-        .stakeholder-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 10px;
-        }
-
-        .stakeholder-item {
-            background: var(--gmp-light-green);
-            padding: 12px 15px;
-            border-radius: 8px;
-        }
-
-        .stakeholder-item strong {
-            color: var(--gmp-purple);
-            display: block;
-            font-size: 14px;
-        }
-
-        .stakeholder-item span {
-            color: var(--text-gray);
-            font-size: 12px;
-        }
-
-        .checklist-icon {
-            flex-shrink: 0;
-            font-size: 16px;
-        }
-
-        .important-date {
-            background: linear-gradient(135deg, var(--gmp-light-green) 0%, #e8f5e9 100%);
-            border-left: 4px solid var(--gmp-dark-green);
-            padding: 15px 20px;
-            border-radius: 0 10px 10px 0;
-            margin-top: 15px;
-        }
-
-        .important-date strong {
-            color: var(--gmp-dark-green);
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .pillar-card-modal {
-            background: linear-gradient(135deg, var(--gmp-light-purple) 0%, #f0eef8 100%);
-            border-left: 4px solid var(--gmp-purple);
-            padding: 12px 15px;
-            border-radius: 0 8px 8px 0;
-            margin-bottom: 8px;
-        }
-
-        .pillar-card-modal:last-child {
-            margin-bottom: 0;
-        }
-
-        .pillar-card-modal strong {
-            color: var(--gmp-purple);
-        }
-
-        .not-started-message {
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        .not-started-message svg {
-            width: 60px;
-            height: 60px;
-            color: var(--gmp-light-gray);
-            margin-bottom: 20px;
-        }
-
-        .not-started-message h3 {
-            color: var(--gmp-gray);
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .not-started-message p {
-            color: var(--text-gray);
-            font-size: 14px;
-        }
-
-        .phase-card {
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .phase-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-        }
-
-        @media (max-width: 768px) {
-            .modal-content {
-                margin: 10px;
-                max-height: 95vh;
-            }
-
-            .modal-header {
-                padding: 20px;
-            }
-
-            .modal-body {
-                padding: 20px;
-            }
-
-            .modal-header h2 {
-                font-size: 22px;
-            }
-
-            .stakeholder-grid {
-                grid-template-columns: 1fr;
-            }
-        }
     </style>
 </head>
 <body>
@@ -1037,7 +542,7 @@
                 </svg>
                 Presentation
             </button>
-            <a href="timeline.html" class="nav-btn btn-timeline" id="timelineBtn" onclick="goToSlide(5); return false;">
+            <a href="timeline.html" class="nav-btn btn-timeline" id="timelineBtn">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="12" y1="20" x2="12" y2="10"></line>
                     <line x1="18" y1="20" x2="18" y2="4"></line>
@@ -1055,8 +560,7 @@
             <span class="slide-dot" onclick="goToSlide(2)"></span>
             <span class="slide-dot" onclick="goToSlide(3)"></span>
             <span class="slide-dot" onclick="goToSlide(4)"></span>
-            <span class="slide-dot timeline-dot" onclick="goToSlide(5)"></span>
-            <span class="slide-dot" onclick="goToSlide(6)"></span>
+            <span class="slide-dot" onclick="goToSlide(5)"></span>
         </div>
 
         <!-- Slide 1: Title -->
@@ -1207,106 +711,12 @@
             </div>
             <div class="slide-arrows">
                 <button class="arrow-btn" onclick="prevSlide()">&larr; Previous</button>
-                <button class="arrow-btn" onclick="nextSlide()">Next &rarr;</button>
+                <button class="arrow-btn" onclick="window.location.href='timeline.html'">Next &rarr;</button>
             </div>
         </div>
 
-        <!-- Slide 6: Timeline -->
-        <div class="slide timeline-slide" id="slide-5">
-            <div class="slide-content">
-                <div class="timeline-header">
-                    <h2>Timeline</h2>
-                    <h3>Data Quality Project</h3>
-                    <p class="updated">Updated January 2026</p>
-                </div>
-
-                <div class="timeline-bar">
-                    <div class="timeline-period">Nov-Dec 2025</div>
-                    <div class="timeline-period active">Jan-Feb 2026</div>
-                    <div class="timeline-period">Mar-Apr 2026</div>
-                    <div class="timeline-period future">May-Jun 2026</div>
-                    <div class="timeline-period far-future">Jul-Aug 2026</div>
-                </div>
-
-                <div class="phases-container">
-                    <div class="phase-card completed">
-                        <div class="phase-line"></div>
-                        <div class="phase-content">
-                            <h3 class="phase-title">Preparation</h3>
-                            <p class="phase-description">Team, governance, resources allocated.</p>
-                            <span class="phase-status status-completed">COMPLETED</span>
-                        </div>
-                    </div>
-
-                    <div class="phase-card active">
-                        <div class="phase-line"></div>
-                        <div class="phase-content">
-                            <span class="current-marker">WE ARE HERE</span>
-                            <h3 class="phase-title">Deep Dive</h3>
-                            <ul class="tasks-list">
-                                <li><span>&#x2705;</span> Defined three strategic pillars</li>
-                                <li><span>&#x2705;</span> Built the Data Vision</li>
-                                <li><span>&#x1F4CD;</span> Approval by TM</li>
-                                <li><span>&#x1F51C;</span> Draft Data Strategy</li>
-                                <li><span>&#x1F51C;</span> Describe main Processes</li>
-                                <li><span>&#x1F51C;</span> Develop Use cases</li>
-                                <li><span>&#x1F51C;</span> Interview SMEs</li>
-                            </ul>
-                            <span class="phase-status status-progress">IN PROGRESS</span>
-                        </div>
-                    </div>
-
-                    <div class="phase-card future">
-                        <div class="phase-line"></div>
-                        <div class="phase-content">
-                            <h3 class="phase-title">Keep Core Clean</h3>
-                            <p class="phase-description">IT/data structure. Quality rules. Data management protocol.</p>
-                            <span class="phase-status status-upcoming">UPCOMING</span>
-                        </div>
-                    </div>
-
-                    <div class="phase-card future gradient-1">
-                        <div class="phase-line"></div>
-                        <div class="phase-content">
-                            <h3 class="phase-title">Data Entry</h3>
-                            <p class="phase-description">Validation. Standards. Central data management.</p>
-                            <span class="phase-status status-upcoming">UPCOMING</span>
-                        </div>
-                    </div>
-
-                    <div class="phase-card future gradient-2">
-                        <div class="phase-line"></div>
-                        <div class="phase-content">
-                            <h3 class="phase-title">Data Cleaning</h3>
-                            <p class="phase-description">Identify critical data. Cleaning. Monitoring.</p>
-                            <span class="phase-status status-upcoming">UPCOMING</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-legend">
-                    <div class="legend-item">
-                        <div class="legend-color legend-completed"></div>
-                        <span>Completed</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-color legend-active"></div>
-                        <span>In Progress</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-color legend-upcoming"></div>
-                        <span>Upcoming</span>
-                    </div>
-                </div>
-            </div>
-            <div class="slide-arrows">
-                <button class="arrow-btn" onclick="prevSlide()">&larr; Previous</button>
-                <button class="arrow-btn" onclick="nextSlide()">Next &rarr;</button>
-            </div>
-        </div>
-
-        <!-- Slide 7: Call to Action -->
-        <div class="slide" id="slide-6">
+        <!-- Slide 6: Call to Action -->
+        <div class="slide" id="slide-5">
             <div class="slide-content cta-slide">
                 <h2>We value your input</h2>
                 <p>You have received the full Data Vision document.</p>
@@ -1314,33 +724,15 @@
                 <p class="feedback-note">Your feedback helps us build a data foundation that serves everyone</p>
             </div>
             <div class="slide-arrows">
-                <button class="arrow-btn" onclick="prevSlide()">&larr; Previous</button>
+                <button class="arrow-btn" onclick="window.location.href='timeline.html'">&larr; Previous</button>
                 <button class="arrow-btn" disabled>Next &rarr;</button>
             </div>
         </div>
     </main>
 
-    <!-- Modal Overlay -->
-    <div class="modal-overlay" id="modal-overlay">
-        <div class="modal-content" id="modal-content">
-            <button class="modal-close" onclick="closeModal()">&times;</button>
-            <div id="modal-inner"></div>
-        </div>
-    </div>
-
     <script>
         let currentSlide = 0;
-        const totalSlides = 7;
-        const timelineSlideIndex = 5;
-
-        function updateTimelineButtonGlow() {
-            const timelineBtn = document.getElementById('timelineBtn');
-            if (currentSlide === timelineSlideIndex) {
-                timelineBtn.classList.add('glowing');
-            } else {
-                timelineBtn.classList.remove('glowing');
-            }
-        }
+        const totalSlides = 6;
 
         function goToSlide(index) {
             document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
@@ -1349,8 +741,6 @@
             document.getElementById(`slide-${index}`).classList.add('active');
             document.querySelectorAll('.slide-dot')[index].classList.add('active');
             currentSlide = index;
-
-            updateTimelineButtonGlow();
         }
 
         function nextSlide() {
@@ -1372,290 +762,17 @@
 
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
-            if (document.getElementById('modal-overlay').classList.contains('active')) {
-                if (e.key === 'Escape') closeModal();
-                return;
-            }
             if (e.key === 'ArrowRight') nextSlide();
             if (e.key === 'ArrowLeft') prevSlide();
         });
 
-        // Modal content for each phase
-        const phaseContent = {
-            preparation: `
-                <div class="modal-header">
-                    <span class="modal-status completed">Completed</span>
-                    <h2>Preparation</h2>
-                    <p class="modal-period">November - December 2025</p>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-section">
-                        <h3>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            Project Setup & Foundation
-                        </h3>
-                        <p>Initial phase focused on establishing the team, governance structure, and securing necessary resources for the Data Quality Project.</p>
-                    </div>
-
-                    <div class="modal-section">
-                        <h3>Key Deliverables</h3>
-                        <ul>
-                            <li><span class="checklist-icon">&#x2705;</span> Team formation with Rick as IT Lead and Martin as sponsor</li>
-                            <li><span class="checklist-icon">&#x2705;</span> TRIMM partnership established for data strategy</li>
-                            <li><span class="checklist-icon">&#x2705;</span> Initial workshops conducted</li>
-                            <li><span class="checklist-icon">&#x2705;</span> Governance structure defined</li>
-                            <li><span class="checklist-icon">&#x2705;</span> Resource allocation approved</li>
-                        </ul>
-                    </div>
-
-                    <div class="modal-section">
-                        <h3>Stakeholders Involved</h3>
-                        <div class="stakeholder-grid">
-                            <div class="stakeholder-item">
-                                <strong>Rick van Dijk</strong>
-                                <span>IT Operations & Application Lead</span>
-                            </div>
-                            <div class="stakeholder-item">
-                                <strong>Martin van den Bedum</strong>
-                                <span>Business Operations Manager</span>
-                            </div>
-                            <div class="stakeholder-item">
-                                <strong>TRIMM</strong>
-                                <span>External Digital Agency Partner</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="modal-section">
-                        <h3>Outcomes</h3>
-                        <div class="modal-card">
-                            <h4>Project Foundation Established</h4>
-                            <p>Project scope defined, budget allocation approved, initial assessment of current data landscape completed, and partnership agreement with TRIMM finalized.</p>
-                        </div>
-                    </div>
-                </div>
-            `,
-            deepdive: `
-                <div class="modal-header">
-                    <span class="modal-status in-progress">In Progress</span>
-                    <h2>Deep Dive</h2>
-                    <p class="modal-period">January - February 2026</p>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-section">
-                        <h3>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <line x1="12" y1="8" x2="12" y2="12"></line>
-                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                            </svg>
-                            Strategic Foundation & Vision Development
-                        </h3>
-                        <p>Current phase focusing on developing the strategic pillars and data vision that will guide GMP+ International's data transformation journey.</p>
-                    </div>
-
-                    <div class="modal-section">
-                        <h3>Progress</h3>
-                        <ul>
-                            <li><span class="checklist-icon">&#x2705;</span> Defined three strategic pillars</li>
-                            <li><span class="checklist-icon">&#x2705;</span> Built the Data Vision on those pillars</li>
-                            <li><span class="checklist-icon">&#x1F4CD;</span> Approval by Team Managers on Data Vision (Feb 3, 2026)</li>
-                            <li><span class="checklist-icon">&#x1F51C;</span> Finalise draft Data Strategy</li>
-                            <li><span class="checklist-icon">&#x1F51C;</span> Describe main Processes</li>
-                            <li><span class="checklist-icon">&#x1F51C;</span> Develop Use cases on Strategic Pillars</li>
-                            <li><span class="checklist-icon">&#x1F51C;</span> Interview Subject Matter Experts</li>
-                        </ul>
-                    </div>
-
-                    <div class="modal-section">
-                        <h3>Strategic Pillars</h3>
-                        <div class="pillar-card-modal">
-                            <strong>1. Transparency in the Chain</strong>
-                            <p>Traceability & transparency in feed supply chain</p>
-                        </div>
-                        <div class="pillar-card-modal">
-                            <strong>2. Insight-Driven Decisions</strong>
-                            <p>Business Intelligence, data-driven decision making</p>
-                        </div>
-                        <div class="pillar-card-modal">
-                            <strong>3. Market Development</strong>
-                            <p>GMP+ Community and partnerships growth</p>
-                        </div>
-                    </div>
-
-                    <div class="modal-section">
-                        <h3>5 Data Principles</h3>
-                        <ul>
-                            <li><span class="checklist-icon">1.</span> One version of the truth</li>
-                            <li><span class="checklist-icon">2.</span> Pragmatic but explicit data governance</li>
-                            <li><span class="checklist-icon">3.</span> Layered application and data architecture</li>
-                            <li><span class="checklist-icon">4.</span> Purposeful and proportionate use of data</li>
-                            <li><span class="checklist-icon">5.</span> Transparent, secure and ethical use of data</li>
-                        </ul>
-                    </div>
-
-                    <div class="important-date">
-                        <strong>Important Date</strong>
-                        February 3, 2026 - Team Managers meeting for Data Vision approval
-                    </div>
-                </div>
-            `,
-            keepcoreclean: `
-                <div class="modal-header">
-                    <span class="modal-status upcoming">Upcoming</span>
-                    <h2>Keep Core Clean</h2>
-                    <p class="modal-period">March - April 2026</p>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-section">
-                        <h3>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                <line x1="3" y1="9" x2="21" y2="9"></line>
-                                <line x1="9" y1="21" x2="9" y2="9"></line>
-                            </svg>
-                            Architecture & Governance Implementation
-                        </h3>
-                        <p>This phase will establish the IT/data structure, implement quality rules, and activate data management protocols.</p>
-                    </div>
-
-                    <div class="modal-section">
-                        <h3>Key Activities</h3>
-                        <ul>
-                            <li><span class="checklist-icon">&#x1F4CB;</span> IT/data structure definition</li>
-                            <li><span class="checklist-icon">&#x1F4CB;</span> Quality rules development</li>
-                            <li><span class="checklist-icon">&#x1F4CB;</span> Data management protocols</li>
-                            <li><span class="checklist-icon">&#x1F4CB;</span> Platform decision (D365 CE migration - deadline March 31, 2026)</li>
-                            <li><span class="checklist-icon">&#x1F4CB;</span> Clean Core principle implementation</li>
-                            <li><span class="checklist-icon">&#x1F4CB;</span> Data Governance Group activation</li>
-                        </ul>
-                    </div>
-
-                    <div class="modal-section">
-                        <h3>Medallion Architecture</h3>
-                        <div class="modal-card">
-                            <h4>Bronze Layer</h4>
-                            <p>Raw data ingestion from CBs, portals, external systems</p>
-                        </div>
-                        <div class="modal-card">
-                            <h4>Silver Layer</h4>
-                            <p>Cleaned, validated, standardized data</p>
-                        </div>
-                        <div class="modal-card">
-                            <h4>Gold Layer</h4>
-                            <p>Refined data for analytics and reporting</p>
-                        </div>
-                    </div>
-
-                    <div class="modal-section">
-                        <h3>Governance Structures</h3>
-                        <ul>
-                            <li><span class="checklist-icon">&#x1F465;</span> Data Governance Group (DGG) activation</li>
-                            <li><span class="checklist-icon">&#x1F464;</span> Data Owners assignment per domain</li>
-                            <li><span class="checklist-icon">&#x1F511;</span> Key Users identification</li>
-                            <li><span class="checklist-icon">&#x1F4CA;</span> Decision authority tiers implementation</li>
-                        </ul>
-                    </div>
-
-                    <div class="important-date">
-                        <strong>Critical Deadline</strong>
-                        March 31, 2026 - Platform decision (ViaSyst migration vs. D365 CE optimization)
-                    </div>
-                </div>
-            `,
-            dataentry: `
-                <div class="modal-header">
-                    <span class="modal-status not-started">Not Started</span>
-                    <h2>Data Entry</h2>
-                    <p class="modal-period">May - June 2026</p>
-                </div>
-                <div class="modal-body">
-                    <div class="not-started-message">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="12" y1="8" x2="12" y2="12"></line>
-                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                        </svg>
-                        <h3>Not Started Yet</h3>
-                        <p>This phase will begin after the Keep Core Clean phase is completed.</p>
-                    </div>
-
-                    <div class="modal-section">
-                        <h3>Planned Focus</h3>
-                        <div class="modal-card">
-                            <h4>Validation & Standards Implementation</h4>
-                            <p>Implementation of validation rules, data entry standards for 36 Certification Bodies, central data management protocols, and CB training on data input standards.</p>
-                        </div>
-                    </div>
-                </div>
-            `,
-            datacleaning: `
-                <div class="modal-header">
-                    <span class="modal-status not-started">Not Started</span>
-                    <h2>Data Cleaning</h2>
-                    <p class="modal-period">July - August 2026</p>
-                </div>
-                <div class="modal-body">
-                    <div class="not-started-message">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="12" y1="8" x2="12" y2="12"></line>
-                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                        </svg>
-                        <h3>Not Started Yet</h3>
-                        <p>This phase will begin after the Data Entry phase is completed.</p>
-                    </div>
-
-                    <div class="modal-section">
-                        <h3>Planned Focus</h3>
-                        <div class="modal-card">
-                            <h4>Data Quality & Monitoring</h4>
-                            <p>Critical data identification, data cleaning campaigns, quality monitoring dashboards, and ongoing maintenance protocols.</p>
-                        </div>
-                    </div>
-                </div>
-            `
-        };
-
-        // Initialize phase card click handlers when DOM is loaded
-        function initPhaseCards() {
-            const phaseCards = document.querySelectorAll('#slide-5 .phase-card');
-            const phaseIds = ['preparation', 'deepdive', 'keepcoreclean', 'dataentry', 'datacleaning'];
-
-            phaseCards.forEach((card, index) => {
-                card.addEventListener('click', () => openModal(phaseIds[index]));
-            });
-        }
-
-        function openModal(phaseId) {
-            const modalOverlay = document.getElementById('modal-overlay');
-            const modalInner = document.getElementById('modal-inner');
-
-            if (phaseContent[phaseId]) {
-                modalInner.innerHTML = phaseContent[phaseId];
-                modalOverlay.classList.add('active');
-                document.body.style.overflow = 'hidden';
+        // Handle direct navigation to slide via URL hash
+        if (window.location.hash) {
+            const slideMatch = window.location.hash.match(/slide-(\d+)/);
+            if (slideMatch) {
+                goToSlide(parseInt(slideMatch[1]));
             }
         }
-
-        function closeModal() {
-            const modalOverlay = document.getElementById('modal-overlay');
-            modalOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        // Close on overlay click
-        document.getElementById('modal-overlay').addEventListener('click', (e) => {
-            if (e.target === e.currentTarget) {
-                closeModal();
-            }
-        });
-
-        // Initialize phase cards on load
-        initPhaseCards();
     </script>
 </body>
 </html>
